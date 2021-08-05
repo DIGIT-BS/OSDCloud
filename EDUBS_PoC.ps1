@@ -16,4 +16,4 @@ Import-Module OSD -Force
 
 #Start OSDCloudScriptPad
 Write-Host -ForegroundColor Green "Start OSDCloudScriptPad"
-Start-ScriptPad -GitOwner DigIT-BS -GitRepo OSDCloud -GitPath Config
+Start-ScriptPad -GitOwner DigIT-BS -GitRepo OSDCloud -GitPath Profiles
