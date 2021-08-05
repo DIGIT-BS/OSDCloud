@@ -1,5 +1,5 @@
+Start-Sleep -Seconds 15
 Write-Host -ForegroundColor Green "Starting OSDCloud ZTI"
-Start-Sleep -Seconds 5
 
 #Change Display Resolution for Virtual Machine
 if ((Get-MyComputerModel) -match 'Virtual') {
