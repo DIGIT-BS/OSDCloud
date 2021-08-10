@@ -15,5 +15,5 @@ Write-Host  -ForegroundColor Green "Importing OSD PowerShell Module"
 Import-Module OSD -Force
 
 #Start OSDCloudScriptPad
-Write-Host -ForegroundColor Green "Start OSDCloudScriptPad"
-Start-ScriptPad -GitOwner DigIT-BS -GitRepo OSDCloud -GitPath Profiles
+Write-Host -ForegroundColor Green "Start OSDPad"
+Start-OSDPad -RepoOwner DIGIT-BS -RepoName OSDCloud -RepoFolder 'Profiles' -BrandingTitle 'DIG-IT Windows 10 Deployment'
