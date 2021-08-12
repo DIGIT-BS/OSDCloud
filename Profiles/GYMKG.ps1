@@ -113,9 +113,9 @@ Write-Host -ForegroundColor Green "Create C:\Windows\System32\Autopilot.cmd"
 $AutopilotCMD = @'
 PowerShell -NoL -Com Set-ExecutionPolicy RemoteSigned -Force
 Set Path = %PATH%;C:\Program Files\WindowsPowerShell\Scripts
-Start /Wait PowerShell -NoL -C "$LanguageList = Get-WinUserLanguageList; $LanguageList.Add("de-CH"); Set-WinUserLanguageList $LanguageList -Force"
-Start /Wait PowerShell -NoL -C "$LanguageList = Get-WinUserLanguageList; $LanguageList.Remove(($LanguageList | Where-Object LanguageTag -like 'de-DE')); Set-WinUserLanguageList $LanguageList -Force"
 Start /Wait PowerShell -NoL -C Install-Module AutopilotOOBE -Force -Verbose
+Start /Wait PowerShell -NoL -C Install-Module OSD -Force -Verbose
+Start /Wait PowerShell -NoL -C Invoke-WebPSScript https://raw.githubusercontent.com/DIGIT-BS/OSDCloud/main/Set-KeyboardLanguage.ps1
 Start /Wait PowerShell -NoL -C Start-AutopilotOOBE
 Start /Wait PowerShell -NoL -C Start-OOBEDeploy
 Start /Wait PowerShell -NoL -C Restart-Computer -Force
