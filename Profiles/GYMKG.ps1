@@ -86,7 +86,7 @@ $AutopilotOOBEJson = @'
     "AddToGroup": "sg-GYMKG",
     "AddToGroupOptions":  [
                     "sg-GYMKG",
-                    "sg-GYMWM"
+                    "sg-GYMWG"
     ],
     "Hidden":  [
                    "AssignedComputerName",
