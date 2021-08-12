@@ -21,6 +21,7 @@ $Params = @{
     OSEdition = "Enterprise"
     OSLanguage = "de-de"
     ZTI = $true
+    Screenshot = $true
 }
 Start-OSDCloud @Params
 
@@ -82,9 +83,9 @@ $AutopilotOOBEJson = @'
                    "IsPresent":  true
                },
     "GroupTag":  "Mittelschulen",
-    "AddToGroup": "sg-GYMWM",
+    "AddToGroup": "sg-GYMWG",
     "AddToGroupOptions":  [
-                    "sg-GYMWM",
+                    "sg-GYMWG",
                     "sg-GYMKG"
     ],
     "Hidden":  [
@@ -113,6 +114,8 @@ $AutopilotCMD = @'
 PowerShell -NoL -Com Set-ExecutionPolicy RemoteSigned -Force
 Set Path = %PATH%;C:\Program Files\WindowsPowerShell\Scripts
 Start /Wait PowerShell -NoL -C Install-Module AutopilotOOBE -Force -Verbose
+Start /Wait PowerShell -NoL -C Install-Module OSD -Force -Verbose
+Start /Wait PowerShell -NoL -C Invoke-WebPSScript https://raw.githubusercontent.com/DIGIT-BS/OSDCloud/main/Set-KeyboardLanguage.ps1
 Start /Wait PowerShell -NoL -C Start-AutopilotOOBE
 Start /Wait PowerShell -NoL -C Start-OOBEDeploy
 Start /Wait PowerShell -NoL -C Restart-Computer -Force
