@@ -21,7 +21,6 @@ $Params = @{
     OSEdition = "Enterprise"
     OSLanguage = "de-de"
     ZTI = $true
-    Screenshot = $true
 }
 Start-OSDCloud @Params
 
