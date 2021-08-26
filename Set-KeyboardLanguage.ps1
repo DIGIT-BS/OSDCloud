@@ -8,7 +8,7 @@ Write-Host $LanguageList
 $LanguageList.Add("de-CH")
 Set-WinUserLanguageList $LanguageList -Force
 
-Sleep 5
+Start-Sleep -Seconds 5
 
 $LanguageList = Get-WinUserLanguageList
 $LanguageList.Remove(($LanguageList | Where-Object LanguageTag -like 'de-DE'))
