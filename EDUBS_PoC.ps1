@@ -102,11 +102,13 @@ $AutopilotOOBEJson = @'
                },
     "GroupTag":  "Mittelschulen",
     "AddToGroup": "CGRP-MDM-AUTOPILOT",
+    "AddToGroupOptions":  [
+                    "CGRP-MDM-GYMKG",
+                    "CGRP-MDM-GYMWG"
+    ],
     "Hidden":  [
                    "AssignedComputerName",
                    "AssignedUser",
-                   "AddToGroup",
-                   "AddToGroupOptions",
                    "PostAction",
                    "GroupTag",
                    "Assign"
