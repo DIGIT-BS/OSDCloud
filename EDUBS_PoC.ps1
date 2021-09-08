@@ -1,5 +1,7 @@
-Start-Sleep -Seconds 15
 Write-Host -ForegroundColor Green "Starting OSDCloud ZTI"
+
+Write-Host -ForegroundColor Green "Bringing up the network card"
+Start-Sleep -Seconds 15
 
 #Change Display Resolution for Virtual Machine
 if ((Get-MyComputerModel) -match 'Virtual') {
@@ -8,18 +10,20 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 }
 
 #Make sure I have the latest OSD Content
+Write-Host ""
 Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
 Install-Module OSD -Force
 
 Write-Host  -ForegroundColor Green "Importing OSD PowerShell Module"
 Import-Module OSD -Force
+Write-Host ""
 
 #Start OSDCloudScriptPad - to choose bertween the different profiles
 #Write-Host -ForegroundColor Green "Start OSDPad"
 #Start-OSDPad -RepoOwner DIGIT-BS -RepoName OSDCloud -RepoFolder 'Profiles' -BrandingTitle 'DIG-IT PoC Windows 10 Deployment'
 
 #Start the generic process - put all Autopilot devices into the same group
-Write-Host -ForegroundColor Green "Kick off the process"
+Write-Host -ForegroundColor Yellow "Kick off the process"
 #================================================
 #   [PreOS] Update Module
 #================================================
@@ -27,12 +31,6 @@ if ((Get-MyComputerModel) -match 'Virtual') {
     Write-Host  -ForegroundColor Green "Setting Display Resolution to 1600x"
     Set-DisRes 1600
 }
-
-Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
-Install-Module OSD -Force
-
-Write-Host  -ForegroundColor Green "Importing OSD PowerShell Module"
-Import-Module OSD -Force   
 
 #=======================================================================
 #   [OS] Params and Start-OSDCloud
