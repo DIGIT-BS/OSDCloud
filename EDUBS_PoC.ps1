@@ -1,7 +1,5 @@
 Write-Host -ForegroundColor Green "Starting OSDCloud ZTI"
-
-Write-Host -ForegroundColor Green "Bringing up the network card"
-Start-Sleep -Seconds 15
+Start-Sleep -Seconds 5
 
 #Change Display Resolution for Virtual Machine
 if ((Get-MyComputerModel) -match 'Virtual') {
@@ -23,7 +21,7 @@ Write-Host ""
 #Start-OSDPad -RepoOwner DIGIT-BS -RepoName OSDCloud -RepoFolder 'Profiles' -BrandingTitle 'DIG-IT PoC Windows 10 Deployment'
 
 #Start the generic process - put all Autopilot devices into the same group
-Write-Host -ForegroundColor Yellow "Kick off the process"
+Write-Host -ForegroundColor Red "Kick off the process"
 #================================================
 #   [PreOS] Update Module
 #================================================
