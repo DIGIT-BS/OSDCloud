@@ -17,5 +17,5 @@ Import-Module OSD -Force
 Write-Host ""
 
 #Start OSDCloudScriptPad - to choose bertween the different profiles
-#Write-Host -ForegroundColor Green "Start OSDPad"
+Write-Host -ForegroundColor Red "Start OSDPad"
 Start-OSDPad -RepoOwner DIGIT-BS -RepoName OSDCloud -RepoFolder 'Profiles' -BrandingTitle 'DIG-IT PoC Windows 10 Deployment'
