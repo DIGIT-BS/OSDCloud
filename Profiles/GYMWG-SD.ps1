@@ -81,11 +81,11 @@ $AutopilotOOBEJson = @'
     "Assign":  {
                    "IsPresent":  true
                },
-    "GroupTag":  "Mittelschulen",
-    "AddToGroup": "CGRP-MDM-GYMWG",
+    "GroupTag":  "GYMWG-SD",
+    "AddToGroup": "CGRP-MDM-GYMWG-SD",
     "AddToGroupOptions":  [
-                    "CGRP-MDM-GYMWG",
-                    "CGRP-MDM-GYMKG"
+                    "CGRP-MDM-GYMKG-SD",
+                    "CGRP-MDM-GYMWG-PU"
     ],
     "Hidden":  [
                    "AssignedComputerName",

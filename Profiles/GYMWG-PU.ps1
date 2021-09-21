@@ -81,13 +81,15 @@ $AutopilotOOBEJson = @'
     "Assign":  {
                    "IsPresent":  true
                },
-    "GroupTag":  "Mittelschulen",
-    "AddToGroup": "CGRP-MDM-AUTOPILOT",
+    "GroupTag":  "GYMWG-PU",
+    "AddToGroup": "CGRP-MDM-GYMWG-PU",
+    "AddToGroupOptions":  [
+                    "CGRP-MDM-GYMKG-SD",
+                    "CGRP-MDM-GYMWG-SD"
+    ],
     "Hidden":  [
                    "AssignedComputerName",
                    "AssignedUser",
-                   "AddToGroup",
-                   "AddToGroupOptions",
                    "PostAction",
                    "GroupTag",
                    "Assign"
@@ -124,8 +126,10 @@ $AutopilotCMD | Out-File -FilePath 'C:\Windows\System32\Autopilot.cmd' -Encoding
 #================================================
 Write-Host -ForegroundColor Green "Create C:\Windows\Setup\Scripts\SetupComplete.cmd"
 $SetupCompleteCMD = @'
-RD C:\OSDCloud\OS /S /Q
-RD C:\Drivers /S /Q
+PowerShell -NoL -Com Set-ExecutionPolicy RemoteSigned -Force
+Set Path = %PATH%;C:\Program Files\WindowsPowerShell\Scripts
+REM Start /Wait PowerShell -NoL -C Install-Module AutopilotOOBE -Force -Verbose
+MD C:\Akos_Setupcomplete
 '@
 $SetupCompleteCMD | Out-File -FilePath 'C:\Windows\Setup\Scripts\SetupComplete.cmd' -Encoding ascii -Force
 

@@ -1,4 +1,3 @@
-
 #================================================
 #   [PreOS] Update Module
 #================================================
@@ -81,11 +80,11 @@ $AutopilotOOBEJson = @'
     "Assign":  {
                    "IsPresent":  true
                },
-    "GroupTag":  "Mittelschulen",
-    "AddToGroup": "CGRP-MDM-GYMKG",
+    "GroupTag":  "GYMKG-SD",
+    "AddToGroup": "CGRP-MDM-GYMKG-SD",
     "AddToGroupOptions":  [
-                    "CGRP-MDM-GYMKG",
-                    "CGRP-MDM-GYMWG"
+                    "CGRP-MDM-GYMWG-SD",
+                    "CGRP-MDM-GYMWG-PU"
     ],
     "Hidden":  [
                    "AssignedComputerName",
