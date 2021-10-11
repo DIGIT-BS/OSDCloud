@@ -91,7 +91,6 @@ $AutopilotOOBEJson = @'
                    "AssignedComputerName",
                    "AssignedUser",
                    "PostAction",
-                   "GroupTag",
                    "Assign"
                ],
     "PostAction":  "Quit",
