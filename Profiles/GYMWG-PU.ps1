@@ -125,6 +125,8 @@ $AutopilotCMD | Out-File -FilePath 'C:\Windows\System32\Autopilot.cmd' -Encoding
 #================================================
 Write-Host -ForegroundColor Green "Create C:\Windows\Setup\Scripts\SetupComplete.cmd"
 $SetupCompleteCMD = @'
+COPY /Y C:\OSDCloud\OSDCloud.json C:\Windows\Temp
+COPY /Y C:\OSDCloud\Logs\*.* C:\Windows\Temp
 RD C:\OSDCloud\OS /S /Q
 RD C:\Drivers /S /Q
 RD C:\Temp /S /Q
