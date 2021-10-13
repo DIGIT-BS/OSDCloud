@@ -18,7 +18,7 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 #=======================================================================
 $Params = @{
     OSBuild = "20H2"
-    OSEdition = "Enterprise"
+    OSEdition = "Pro"
     OSLanguage = "de-de"
     ZTI = $true
 }
