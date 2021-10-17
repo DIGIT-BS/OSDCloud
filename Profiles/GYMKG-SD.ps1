@@ -41,6 +41,7 @@ $OOBEDeployJson = @'
                         "Microsoft.MicrosoftOfficeHub",
                         "Microsoft.MicrosoftSolitaireCollection",
                         "Microsoft.MixedReality.Portal",
+                        "Microsoft.Office.OneNote",
                         "Microsoft.People",
                         "Microsoft.SkypeApp",
                         "Microsoft.Wallet",
