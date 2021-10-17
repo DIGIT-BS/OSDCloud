@@ -8,13 +8,13 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 }
 
 #Make sure I have the latest OSD Content
-#Write-Host ""
-#Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
-#Update-Module OSD -Force
+Write-Host ""
+Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
+Update-Module OSD -Force
 
-#Write-Host  -ForegroundColor Green "Importing OSD PowerShell Module"
-#Import-Module OSD -Force
-#Write-Host ""
+Write-Host  -ForegroundColor Green "Importing OSD PowerShell Module"
+Import-Module OSD -Force
+Write-Host ""
 
 #Start OSDCloudScriptPad - to choose bertween the different profiles
 Write-Host -ForegroundColor Red "Start OSDPad"
