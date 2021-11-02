@@ -129,6 +129,7 @@ Write-Host -ForegroundColor Green "Create C:\Windows\Setup\Scripts\SetupComplete
 $SetupCompleteCMD = @'
 RD C:\OSDCloud\OS /S /Q
 XCOPY C:\OSDCloud\ C:\Windows\Logs\OSD /E /H /C /I /Y
+XCOPY C:\ProgramData\OSDeploy C:\Windows\Logs\OSD /E /H /C /I /Y
 RD C:\OSDCloud /S /Q
 RD C:\Drivers /S /Q
 RD C:\Temp /S /Q
