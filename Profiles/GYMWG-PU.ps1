@@ -21,6 +21,7 @@ $Params = @{
     OSEdition = "Pro"
     OSLanguage = "de-de"
     ZTI = $true
+    Firmware = $true
 }
 Start-OSDCloud @Params
 
@@ -126,8 +127,8 @@ $AutopilotCMD | Out-File -FilePath 'C:\Windows\System32\Autopilot.cmd' -Encoding
 #================================================
 Write-Host -ForegroundColor Green "Create C:\Windows\Setup\Scripts\SetupComplete.cmd"
 $SetupCompleteCMD = @'
-COPY /Y C:\OSDCloud\OSDCloud.json C:\Windows\Temp
-COPY /Y C:\OSDCloud\Logs\*.* C:\Windows\Temp
+COPY /Y C:\OSDCloud\OSDCloud.json C:\Windows\Logs\OSD
+COPY /Y C:\OSDCloud\Logs\*.* C:\Windows\Logs\OSD
 RD C:\OSDCloud\OS /S /Q
 RD C:\Drivers /S /Q
 RD C:\Temp /S /Q
