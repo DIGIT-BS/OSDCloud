@@ -11,5 +11,6 @@ Start-Sleep -Seconds 5
 #Write-Host ""
 
 #Start OSDCloudScriptPad - to choose bertween the different profiles
-Write-Host -ForegroundColor Red "Start OSDPad"
+Write-Host ""
+Write-Host -ForegroundColor Green "Start OSDPad"
 Start-OSDPad -RepoOwner DIGIT-BS -RepoName OSDCloud -RepoFolder 'Profiles' -BrandingTitle 'DIG-IT Windows 10 Deployment'
