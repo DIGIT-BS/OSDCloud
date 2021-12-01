@@ -86,7 +86,6 @@ $AutopilotOOBEJson = @'
     "GroupTag":  "GYMWG-PU",
     "AddToGroup": "CGRP-MDM-GYMWG-PU",
     "AddToGroupOptions":  [
-                    "CGRP-MDM-GYMKG-SD",
                     "CGRP-MDM-GYMWG-SD"
     ],
     "Hidden":  [

@@ -21,6 +21,7 @@ $Params = @{
     OSEdition = "Pro"
     OSLanguage = "de-de"
     ZTI = $true
+    Firmware = $true
 }
 Start-OSDCloud @Params
 
@@ -85,7 +86,6 @@ $AutopilotOOBEJson = @'
     "GroupTag":  "GYMWG-SD",
     "AddToGroup": "CGRP-MDM-GYMWG-SD",
     "AddToGroupOptions":  [
-                    "CGRP-MDM-GYMKG-SD",
                     "CGRP-MDM-GYMWG-PU"
     ],
     "Hidden":  [
@@ -115,6 +115,7 @@ Set Path = %PATH%;C:\Program Files\WindowsPowerShell\Scripts
 Start /Wait PowerShell -NoL -C Install-Module AutopilotOOBE -Force -Verbose
 Start /Wait PowerShell -NoL -C Install-Module OSD -Force -Verbose
 Start /Wait PowerShell -NoL -C Invoke-WebPSScript https://raw.githubusercontent.com/DIGIT-BS/OSDCloud/main/Set-KeyboardLanguage.ps1
+Start /Wait PowerShell -NoL -C Invoke-WebPSScript https://raw.githubusercontent.com/DIGIT-BS/OSDCloud/main/Install-EmbeddedProductKey.ps1
 Start /Wait PowerShell -NoL -C Start-AutopilotOOBE
 Start /Wait PowerShell -NoL -C Start-OOBEDeploy
 Start /Wait PowerShell -NoL -C Restart-Computer -Force
@@ -126,9 +127,10 @@ $AutopilotCMD | Out-File -FilePath 'C:\Windows\System32\Autopilot.cmd' -Encoding
 #================================================
 Write-Host -ForegroundColor Green "Create C:\Windows\Setup\Scripts\SetupComplete.cmd"
 $SetupCompleteCMD = @'
-COPY /Y C:\OSDCloud\OSDCloud.json C:\Windows\Temp
-COPY /Y C:\OSDCloud\Logs\*.* C:\Windows\Temp
 RD C:\OSDCloud\OS /S /Q
+XCOPY C:\OSDCloud\ C:\Windows\Logs\OSD /E /H /C /I /Y
+XCOPY C:\ProgramData\OSDeploy C:\Windows\Logs\OSD /E /H /C /I /Y
+RD C:\OSDCloud /S /Q
 RD C:\Drivers /S /Q
 RD C:\Temp /S /Q
 '@
