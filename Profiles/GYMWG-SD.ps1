@@ -97,7 +97,7 @@ $AutopilotOOBEJson = @'
     "PostAction":  "Quit",
     "Run":  "NetworkingWireless",
     "Docs":  "https://google.com/",
-    "Title":  "EDUBS PoC Autopilot Register"
+    "Title":  "DIG-IT | Produktive Umgebung | Autopilot Register"
 }
 '@
 If (!(Test-Path "C:\ProgramData\OSDeploy")) {
