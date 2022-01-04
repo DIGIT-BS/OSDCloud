@@ -85,9 +85,6 @@ $AutopilotOOBEJson = @'
                },
     "GroupTag":  "GYMGM-SD",
     "AddToGroup": "CGRP-MDM-GYMGM-SD",
-    "AddToGroupOptions":  [
-                    "CGRP-MDM-GYMWG-PU"
-    ],
     "Hidden":  [
                    "AssignedComputerName",
                    "AssignedUser",
